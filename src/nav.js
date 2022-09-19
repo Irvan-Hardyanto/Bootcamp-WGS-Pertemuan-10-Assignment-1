@@ -1,4 +1,6 @@
-export default <div class="container">
+ const Nav=()=>{
+    return(
+        <div class="container">
 <div class="row">
     <nav class="navbar navbar-expand-lg justify-content-center">{/*Navbar*/}
         <ul class="nav">
@@ -9,3 +11,7 @@ export default <div class="container">
     </nav>
 </div>
 </div>
+    )
+}
+
+export default Nav;
