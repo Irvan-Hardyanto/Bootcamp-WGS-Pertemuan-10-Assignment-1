@@ -7,16 +7,10 @@ import nav from './nav';//import navbar
 function renderDOM(content,id){
   ReactDOM.render(content, document.getElementById(id));
 }
-
-//fungsi untuk menampilkan nav bar
-function getNav(){
-  return nav;
-}
-
 //contoh elemen tertentu
 const element = <div>
   {/*Panggil nav nya*/}
-  {getNav()}
+  {nav}
   <h1>Bootcamp WGS Batch 3</h1>
         <h3>My Name is Irvan Hardyanto</h3>
 </div>
