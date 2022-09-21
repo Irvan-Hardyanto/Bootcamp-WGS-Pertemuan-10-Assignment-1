@@ -15,7 +15,7 @@ const Comment = (props) => {
     <div className="ui container comments">
       <div className="comment">
         <a href="/" className='avatar'>
-          <img alt="avatar" src={faker.image.avatar()} />
+          <img alt="avatar" src={props.avatar} />
         </a>
         <div className='content'>
           <a href="/" className='author'>
@@ -35,14 +35,14 @@ const Comment = (props) => {
 
 //Data dummy untuk komentar
 const comments = [
-  { name: "Irvan", time: "9:37 AM", comment: "Nice Info!" },
-  { name: "Dida", time: "5:00 PM", comment: "What a Story!" },
-  { name: "Budi Setiawan", time: "8:00 PM", comment: "W O W !" }
+  { name: "Irvan", time: "9:37 AM", comment: "Nice Info!", avatar: faker.image.avatar()},
+  { name: "Dida", time: "5:00 PM", comment: "What a Story!", avatar: faker.image.avatar() },
+  { name: "Budi Setiawan", time: "8:00 PM", comment: "W O W !", avatar: faker.image.avatar() }
 ];
 
 root.render(
   <div>
-    {/*Tampilkan tiga buah komentar dari atas sampai ke bawah*/}
+    {/*Menampilkan Komentar berdasarkan jumlah data yang disediakan*/}
     for(let comment of comments){
       <Comment name={comment.name} time={comment.time} comment={comment.comment}></Comment>
     }
