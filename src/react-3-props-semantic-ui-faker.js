@@ -33,6 +33,7 @@ const Comment = (props) => {
   );
 }
 
+//Data dummy untuk komentar
 const comments = [
   { name: "Irvan", time: "9:37 AM", comment: "Nice Info!" },
   { name: "Dida", time: "5:00 PM", comment: "What a Story!" },
