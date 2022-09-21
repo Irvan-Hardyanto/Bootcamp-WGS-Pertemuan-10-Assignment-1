@@ -33,10 +33,17 @@ const Comment = (props) => {
   );
 }
 
+const comments = [
+  { name: "Irvan", time: "9:37 AM", comment: "Nice Info!" },
+  { name: "Dida", time: "5:00 PM", comment: "What a Story!" },
+  { name: "Budi Setiawan", time: "8:00 PM", comment: "W O W !" }
+];
+
 root.render(
   <div>
-  <Comment name="Irvan" time="9:37 AM" comment="Nice Info!"></Comment>
-    <Comment name="Dida" time="5:00 PM" comment="What a Story!"></Comment>
-    <Comment name="Budi Setiawan" time="8:00 PM" comment="W O W !"></Comment>
+    {/*Tampilkan tiga buah komentar dari atas sampai ke bawah*/}
+    for(let comment of comments){
+      <Comment name={comment.name} time={comment.time} comment={comment.comment}></Comment>
+    }
   </div>
 )
