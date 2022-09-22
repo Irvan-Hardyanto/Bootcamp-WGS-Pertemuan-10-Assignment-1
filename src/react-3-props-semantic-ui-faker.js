@@ -34,17 +34,24 @@ const Comment = (props) => {
 }
 
 //Data dummy untuk komentar
-const comments = [
+const dummyComments = [
   { name: "Irvan", time: "9:37 AM", comment: "Nice Info!", avatar: faker.image.avatar()},
   { name: "Dida", time: "5:00 PM", comment: "What a Story!", avatar: faker.image.avatar() },
   { name: "Budi Setiawan", time: "8:00 PM", comment: "W O W !", avatar: faker.image.avatar() }
 ];
 
+/*Menampilkan Komentar berdasarkan jumlah data yang disediakan*/
+const generateDummyComments=()=>{
+  let comments=[];
+  for(let c of dummyComments){
+    comments.push(<Comment name={c.name} time={c.time} comment={c.comment} avatar={c.avatar}></Comment>);
+  }
+  return comments;
+}
+
 root.render(
   <div>
     {/*Menampilkan Komentar berdasarkan jumlah data yang disediakan*/}
-    for(let comment of comments){
-      <Comment name={comment.name} time={comment.time} comment={comment.comment}></Comment>
-    }
+    {generateDummyComments()}
   </div>
 )
