@@ -8,7 +8,7 @@ const el = document.getElementById("root");
 //3) Memberi tahu react untuk Mengambil control dari elemen tersebut 
 const root = ReactDOM.createRoot(el);
 
-//Komponen 
+//Sebuah jam sederhana yang menampilkan waktu saat ini dalam format Jam:menit:detik AM/PM dan terupdate secara real-time.
 class Clock extends React.Component {
   constructor(props) {//konstruktor untuk inisialisasi state
     super(props);
