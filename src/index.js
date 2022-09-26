@@ -32,15 +32,24 @@ class Clock extends React.Component {
 
     //kalau ini tidak dipanggil:
     //method tick() akan terus menerus dipanggil oleh setInterval() meskipun komponen nya tidak ditampilkan
-    clearInterval(this.timerID); 
+    clearInterval(this.timerID);
   }
 
   //Method yang wajib dimiliki oleh setiap komponen yang meng-extend kelas React.Component
   render() {
     return (
-      <div>
-        <h1>Aplikasi Jam Sederhana Menggunakan React Class Component</h1>
-        <h5>Waktu sekarang adalah: {this.state.date.toLocaleTimeString()}.</h5>
+      <div className="ui middle aligned one column padded centered grid" style={{ backgroundColor: "rgb(37, 150, 190)", height: '100%' }}>
+        <div className="centered row">
+          <div className='column'>
+            <div className='ui container' style={{ width: "50%", backgroundColor: "white", textAlign: "center" }}>
+              <h1 class="ui header">Aplikasi Jam Sederhana Menggunakan React Class Component</h1>
+              <h4>Waktu sekarang adalah: </h4>
+              <div style={{backgroundColor:"#016936",color: "white",padding:"1em"}}>
+                <h2>{this.state.date.toLocaleTimeString()}</h2>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
