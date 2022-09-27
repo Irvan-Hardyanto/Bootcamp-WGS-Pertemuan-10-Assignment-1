@@ -8,7 +8,7 @@ const el = document.getElementById("root");
 //3) Memberi tahu react untuk Mengambil control dari elemen tersebut 
 const root = ReactDOM.createRoot(el);
 
-//Komponen 
+//Komponen form
 class ContohForm extends React.Component{
   constructor(props){
     super(props);
