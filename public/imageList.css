@@ -1,0 +1,16 @@
+html,body{
+    padding:0;
+    margin:0;
+}
+
+.image-list{/*Container utama*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));/*Buat sebuah grid dengan lebar kolom antara 250px atau 1 fraction unit, tinngi baris bebas*/
+    grid-gap: 0 10px;/*besarnya gutter antar kolom atau baris*/
+    grid-auto-rows: 10px;/*tinggi setiap baris*/
+}
+
+.image-list img{
+    width:250px;
+    grid-row-end: span 2;
+}
