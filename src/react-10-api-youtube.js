@@ -60,10 +60,6 @@ class Video extends React.Component {
 
 //komponen yang menampilkan daftar video yang diperoleh dari API
 const VideoList = (props) => {
-  // const videos = props.videos.map((video, idx) => {
-  //   console.log("video id is: "+ video.id.videoId)
-  //   return <div className="ui embed" data-url={"https://www.youtube.com/embed/" + video.id.videoId} placeholder={video.snippet.thumbnails.url} ></div>
-  // });
   console.log(props.mainVideo)
   console.log(props.videos.length)
   if (!props.mainVideo&&props.videos.length == 0) {
@@ -120,12 +116,6 @@ const VideoList = (props) => {
           </div>
         </div>
       </div>
-      {/* <div className="ui embed" data-url={"https://www.youtube.com/embed/Pms2R85EWC4"}></div>
-      <div className="ui embed" data-url={"https://www.youtube.com/embed/Pms2R85EWC4"} ></div>
-      <div className="ui embed" data-url={"https://www.youtube.com/embed/Pms2R85EWC4"} ></div>
-      <div className="ui embed" data-url={"https://www.youtube.com/embed/Pms2R85EWC4"} ></div>
-      <div className="ui embed" data-url={"https://www.youtube.com/embed/Pms2R85EWC4"} ></div>
-      <div className="ui embed" data-url={"https://www.youtube.com/embed/Pms2R85EWC4"} ></div> */}
     </div>
   )
 }
@@ -158,12 +148,6 @@ class App extends React.Component {
       <div className="ui container" style={{ paddingTop: "10px", height: "100%" }}>
         <SearchBar onSubmit={this.onSearchSubmit} height='20%' />
         <VideoList onVideoClicked={this.onVideoClicked} mainVideo={this.state.selectedVideo} videos={this.state.videos} height='85%' />
-        {/* <div className="ui grid">
-          {this.state.images.map((img,idx)=>{
-            return <img src={img.urls.thumb}></img>
-          })}
-          
-        </div> */}
       </div>
     )
   }

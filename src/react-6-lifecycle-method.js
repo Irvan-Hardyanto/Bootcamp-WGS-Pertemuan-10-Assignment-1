@@ -42,7 +42,7 @@ class Clock extends React.Component {
         <div className="centered row">
           <div className='column'>
             <div className='ui container' style={{ width: "50%", backgroundColor: "white", textAlign: "center" }}>
-              <h1 class="ui header">Aplikasi Jam Sederhana Menggunakan React Class Component</h1>
+              <h1 className="ui header">Aplikasi Jam Sederhana Menggunakan React Class Component</h1>
               <h4>Waktu sekarang adalah: </h4>
               <div style={{backgroundColor:"#016936",color: "white",padding:"1em"}}>
                 <h2>{this.state.date.toLocaleTimeString()}</h2>
