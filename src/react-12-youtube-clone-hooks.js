@@ -9,6 +9,7 @@ const el = document.getElementById("root");
 //3) Memberi tahu react untuk Mengambil control dari elemen tersebut 
 const root = ReactDOM.createRoot(el);
 
+//Function Component SearchBar, yang menerima masukan berupa kata kunci video yang ingin dicari oleh pengguna
 const SearchBar = (props) => {
     const [term, setTerm] = useState('');
 
@@ -29,6 +30,7 @@ const SearchBar = (props) => {
     )
 }
 
+//Komponen yang merepresentasikan video utama yang ingin ditonton
 const Video = (props) => {
     if (!props.video) {
         return (<div className="ten wide column"><div className="ui message">Please choose a video</div></div>)
