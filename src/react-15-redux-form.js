@@ -52,7 +52,7 @@ const App = () => (
             <label>Education</label>
             <Field name="education" component="select">
               <option />
-              <option value="smk">SMK</option>
+              <option value="high school">High School</option>
               <option value="bachelor">Bachelor</option>
               <option value="master">Master</option>
             </Field>
