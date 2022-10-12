@@ -20,6 +20,8 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 
 const App = (props) => {
+
+  //dispatch isi variabel 'values' ke 'store' pada saat tombol 'Submit' ditekan
   const onSubmit = async values => {
     await sleep(300)
     console.log(values);
@@ -33,10 +35,12 @@ const App = (props) => {
     // window.alert(values)
   }
 
+  //hooks untuk dispatch() dan baca isi store
   const formData=useSelector(state=>state);
   const dispatch=useDispatch();
   
   return (
+    //contoh kode dari react-final-form
     <Styles>
       <h1>Employee Form</h1>
       <Form
