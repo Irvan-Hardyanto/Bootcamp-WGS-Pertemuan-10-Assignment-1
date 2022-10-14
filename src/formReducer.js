@@ -4,7 +4,7 @@ export default (state={//nilai awal state
     employed:false,
     education:'',
     expertises:[],
-    prefTechs:'',
+    tech:'',
     notes:''
 },action) => {
     switch(action.type){
